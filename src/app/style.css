@@ -21,7 +21,6 @@
   --color-orange: #f97316;
   --color-amber: #f59e0b;
   --color-yellow: #eab308;
-  --color-gold: #ffd700;
   --color-lime: #84cc16;
   --color-green: #22c55e;
   --color-emerald: #10b981;
@@ -451,15 +450,15 @@ a:hover {
 }
 
 .sell-card {
-  border: 3px dotted var(--color-gold);
+  border: 3px dotted var(--color-yellow);
 }
 
 .sell-card.dragover, .sell-card:hover {
-  box-shadow: 0 0 10px var(--color-gold);
+  box-shadow: 0 0 10px var(--color-yellow);
 }
 
 .sell-card i {
-  color: var(--color-gold);
+  color: var(--color-yellow);
 }
 
 .evolve-card {
