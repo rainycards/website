@@ -1,0 +1,56 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.content');
+  const actionCards = document.querySelectorAll('.action-card');
+  const sellCard = document.getElementById('sellCard');
+  const evolveCard = document.getElementById('evolveCard');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs and contents
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      // Add active class to clicked tab and corresponding content
+      tab.classList.add('active');
+      const tabId = tab.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+
+    card.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text/plain', JSON.stringify({
+        name: card.dataset.cardName,
+        quantity: card.dataset.quantity
+      }));
+    });
+  });
+
+  actionCards.forEach(card => {
+    card.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      card.classList.add('dragover');
+    });
+
+    card.addEventListener('dragleave', () => {
+      card.classList.remove('dragover');
+    });
+  });
+
+  sellCard.addEventListener('drop', (e) => {
+    e.preventDefault();
+    sellCard.classList.remove('dragover');
+    const data = JSON.parse(e.dataTransfer.getData('text/plain'));
+  });
+
+  evolveCard.addEventListener('drop', (e) => {
+    e.preventDefault();
+    evolveCard.classList.remove('dragover');
+    const data = JSON.parse(e.dataTransfer.getData('text/plain'));
+  });
+});

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rainycards</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Rainycards" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://kit.fontawesome.com/ac9ab6562b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="user-info header-left">
+          <div class="username">
+            <span class="tag tag-blue">ADMIN</span>proplayer919
+          </div>
+          <ul class="attributes">
+            <li>💵 Balance: 100</li>
+            <li>💠 Gems: 100</li>
+            <li>🃏 Cards: 100</li>
+            <li>🔶 Power Points: 100</li>
+          </ul>
+        </div>
+        <div class="header-right">
+          <div class="logo-container">
+            <img class="logo logo-light" src="/brand/logo-light.png" />
+            <img class="logo logo-dark" src="/brand/logo-dark.png" />
+            <span class="logo-text">rainycards</span>
+          </div>
+          <div class="tabs-container">
+            <div class="tab-row">
+              <div class="tab active" data-tab="home">Home</div>
+              <div class="tab" data-tab="collection">Collection</div>
+              <div class="tab" data-tab="social">Social</div>
+            </div>
+            <div class="tab-row">
+              <div class="tab" data-tab="shop">Shop</div>
+              <div class="tab" data-tab="leaderboard">Leaderboard</div>
+              <div class="tab" data-tab="settings">Settings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="tab-content">
+        <div id="home" class="content active">
+          <h2>Welcome to Rainycards!</h2>
+          <p>Hey there proplayer919! This is Rainycards, a game where you collect and sell cards. If this is your first
+            time playing, check out our <a href="#">tutorial</a>.</p>
+          <div class="content-card">
+            <h3>nothing really else to it i guess</h3>
+            <p>have fun playing! ❤️ from the devs</p>
+          </div>
+        </div>
+        <div id="collection" class="content">
+          <h2>Your Card Collection</h2>
+          <div class="cards-container">
+            <div class="action-card sell-card" id="sellCard">
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="action-card evolve-card" id="evolveCard">
+              <i class="fas fa-turn-up"></i>
+            </div>
+            <div class="card border-red" draggable="true">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="card-header">
+                    <img class="card-icon logo-light" src="/brand/logo-light.png" />
+                    <img class="card-icon logo-dark" src="/brand/logo-dark.png" />
+                    <span>#1000000000</span>
+                  </div>
+                  <div class="card-footer">
+                    <h3>Lunar Pup x4</h3>
+                    <p>Moonshine Set | 12% Common<br>Evolution 1</p>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <h3>Lunar Pup</h3>
+                  <p>There are 123456789 of these cards in the world. You have 4 of them.</p>
+                  <b>More Info</b>
+                  <p>This card is part of the <b>Moonshine Set</b> and was released on <b>22/05/2025 (Season
+                      1)</b>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="social" class="content">
+          <h2>Social</h2>
+        </div>
+        <div id="shop" class="content">
+          <h2>Buy Sets</h2>
+        </div>
+        <div id="leaderboard" class="content">
+          <h2>Leaderboard</h2>
+        </div>
+        <div id="settings" class="content">
+          <h2>Settings</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="socials">
+        <a href="https://github.com/rainycards" target="_blank" rel="noopener" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://bsky.app/profile/rainycards.com" target="_blank" rel="noopener" title="Twitter">
+          <i class="fab fa-bluesky"></i>
+        </a>
+        <a href="https://discord.gg/HvxKdUzVZf" target="_blank" rel="noopener" title="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://youtube.com/@rainycards" target="_blank" rel="noopener" title="Youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      &copy; 2025 rainycards. Website is open-sauce. Have 🥳!
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
