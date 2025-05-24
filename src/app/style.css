@@ -378,6 +378,21 @@ a:hover {
   border-color: var(--color-rose);
 }
 
+.card.border-silver .card-front,
+.card.border-silver .card-back {
+  border-color: #C0C0C0;
+}
+
+.card.border-bronze .card-front,
+.card.border-bronze .card-back {
+  border-color: #8B4513;
+}
+
+.card.border-dotted .card-front,
+.card.border-dotted .card-back {
+  border: 3px dotted var(--border-color);
+}
+
 .card-back {
   transform: rotateY(180deg);
   padding: 1rem;
@@ -453,7 +468,8 @@ a:hover {
   border: 3px dotted var(--color-yellow);
 }
 
-.sell-card.dragover, .sell-card:hover {
+.sell-card.dragover,
+.sell-card:hover {
   box-shadow: 0 0 10px var(--color-yellow);
 }
 
@@ -465,7 +481,8 @@ a:hover {
   border: 3px dotted var(--color-blue);
 }
 
-.evolve-card.dragover, .evolve-card:hover {
+.evolve-card.dragover,
+.evolve-card:hover {
   box-shadow: 0 0 10px var(--color-blue);
 }
 

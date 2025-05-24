@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const actionCards = document.querySelectorAll('.action-card');
   const sellCard = document.getElementById('sellCard');
   const evolveCard = document.getElementById('evolveCard');
+  const buyCard = document.getElementById('buyCard');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -51,6 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
   evolveCard.addEventListener('drop', (e) => {
     e.preventDefault();
     evolveCard.classList.remove('dragover');
+    const data = JSON.parse(e.dataTransfer.getData('text/plain'));
+  });
+
+  buyCard.addEventListener('drop', (e) => {
+    e.preventDefault();
+    buyCard.classList.remove('dragover');
     const data = JSON.parse(e.dataTransfer.getData('text/plain'));
   });
 });
