@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Suspended | Rainycards</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Rainycards" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ac9ab6562b.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="logo-container">
+          <img class="logo logo-light" src="/brand/logo-light.png" />
+          <img class="logo logo-dark" src="/brand/logo-dark.png" />
+          <span class="logo-text">rainycards</span>
+        </div>
+        <h2><i class="fa fa-exclamation-triangle" style="color: var(--color-red);"></i> You have been suspended</h2>
+        <div class="error-box">
+          Your account has been suspended. If you believe this is a mistake, please contact support.
+        </div>
+        <p>Reason: <b id="suspendedReason">Reason</b></p>
+        <p>Note: <span id="suspendedNote"><i>No note added</i></span></p>
+        <div class="countdown-container">
+          <div class="countdown-item">
+            <div class="countdown-number" id="suspendedCountdownDays">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="suspendedCountdownHours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="suspendedCountdownMinutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="suspendedCountdownSeconds">00</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="socials">
+        <a href="https://github.com/rainycards" target="_blank" rel="noopener" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://bsky.app/profile/rainycards.com" target="_blank" rel="noopener" title="Twitter">
+          <i class="fab fa-bluesky"></i>
+        </a>
+        <a href="https://discord.gg/HvxKdUzVZf" target="_blank" rel="noopener" title="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+      &copy; 2025 rainycards. Website is open-sauce. Have 🥳!
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
