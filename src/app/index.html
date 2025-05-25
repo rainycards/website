@@ -23,7 +23,7 @@
       rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body>
@@ -254,6 +254,18 @@
         </div>
         <div id="settings" class="content">
           <h2>Settings</h2>
+          <div class="settings-container">
+            <div class="setting-item">
+              <p style="margin-bottom: 0.5rem;"><b><i class="fa fa-headphones"></i> Headphones Recommended</b></p>
+              <label for="ambience">Ambience:</label>
+              <select id="ambience">
+                <option value="none">None</option>
+                <option value="rain">Rain</option>
+                <option value="wind">Wind</option>
+                <option value="thunder">Thunder</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -273,7 +285,7 @@
       &copy; 2025 rainycards. Website is open-sauce. Have 🥳!
     </div>
 
-    <script src="app.js"></script>
+    <script src="/app/app.js"></script>
   </body>
 
 </html>

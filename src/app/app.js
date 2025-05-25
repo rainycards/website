@@ -60,4 +60,53 @@ document.addEventListener('DOMContentLoaded', () => {
     buyCard.classList.remove('dragover');
     const data = JSON.parse(e.dataTransfer.getData('text/plain'));
   });
+
+  // Ambience
+  const ambienceSelect = document.getElementById('ambience');
+  let currentAudio = null;
+
+  const soundFiles = {
+    rain: '/sounds/rain.mp3',
+    wind: '/sounds/wind.mp3',
+    thunder: '/sounds/thunder.mp3',
+  };
+
+  ambienceSelect.addEventListener('change', () => {
+    // Fade out current audio if playing
+    if (currentAudio) {
+      const fadeOut = setInterval(() => {
+        if (currentAudio.volume > 0.05) {
+          currentAudio.volume -= 0.05;
+        } else {
+          currentAudio.volume = 0;
+          currentAudio.pause();
+          clearInterval(fadeOut);
+          currentAudio = null;
+        }
+      }, 50);
+    }
+
+    const selectedValue = ambienceSelect.value;
+
+    // Play new sound if not 'none'
+    if (selectedValue !== 'none' && soundFiles[selectedValue]) {
+      const newAudio = new Audio(soundFiles[selectedValue]);
+      newAudio.loop = true;
+      newAudio.volume = 0;
+      newAudio.play().then(() => {
+        currentAudio = newAudio;
+        // Fade in
+        const fadeIn = setInterval(() => {
+          if (currentAudio && currentAudio.volume < 0.95) {
+            currentAudio.volume += 0.05;
+          } else if (currentAudio) {
+            currentAudio.volume = 1;
+            clearInterval(fadeIn);
+          }
+        }, 50);
+      }).catch(error => {
+        console.error('Error playing audio:', error);
+      });
+    }
+  });
 });
