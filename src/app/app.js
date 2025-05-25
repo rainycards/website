@@ -71,20 +71,27 @@ document.addEventListener('DOMContentLoaded', () => {
     thunder: '/sounds/thunder.mp3',
   };
 
-  ambienceSelect.addEventListener('change', () => {
-    // Fade out current audio if playing
-    if (currentAudio) {
-      const fadeOut = setInterval(() => {
-        if (currentAudio.volume > 0.05) {
-          currentAudio.volume -= 0.05;
-        } else {
-          currentAudio.volume = 0;
-          currentAudio.pause();
-          clearInterval(fadeOut);
-          currentAudio = null;
-        }
-      }, 50);
+  ambienceSelect.addEventListener('change', async () => {
+    // Helper to fade out audio and return a promise when done
+    function fadeOutAudio(audio) {
+      return new Promise(resolve => {
+        if (!audio) return resolve();
+        const fadeOut = setInterval(() => {
+          if (audio.volume > 0.05) {
+            audio.volume -= 0.05;
+          } else {
+            audio.volume = 0;
+            audio.pause();
+            clearInterval(fadeOut);
+            currentAudio = null;
+            resolve();
+          }
+        }, 50);
+      });
     }
+
+    // Fade out current audio if playing
+    await fadeOutAudio(currentAudio);
 
     const selectedValue = ambienceSelect.value;
 
