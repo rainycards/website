@@ -58,9 +58,9 @@
               <div class="tab" data-tab="social"><i class="fas fa-users"></i> Social</div>
             </div>
             <div class="tab-row">
-              <div class="tab" data-tab="shop"><i class="fas fa-gem"></i> Gem Store</div>
-              <div class="tab" data-tab="leaderboard"><i class="fas fa-palette"></i> Studio</div>
-              <div class="tab" data-tab="settings"><i class="fas fa-axe-battle"></i> Battle</div>
+              <div class="tab" data-tab="store"><i class="fas fa-gem"></i> Gem Store</div>
+              <div class="tab" data-tab="studio"><i class="fas fa-palette"></i> Studio</div>
+              <div class="tab" data-tab="battle"><i class="fas fa-axe-battle"></i> Battle</div>
             </div>
             <div class="tab-row">
               <div class="tab" data-tab="shop"><i class="fas fa-store"></i> Card Shop</div>
@@ -80,7 +80,8 @@
             <h3>nothing really else to it i guess</h3>
             <p>have fun playing! ❤️ from the devs</p>
           </div>
-          <p style="margin-top: 1rem;"><b><i class="fa fa-headphones"></i> Headphones recommended while ambience is on</b></p>
+          <p style="margin-top: 1rem;"><b><i class="fa fa-headphones"></i> Headphones recommended while ambience is
+              on</b></p>
         </div>
         <div id="collection" class="content">
           <h2>Your Card Collection</h2>
@@ -117,8 +118,17 @@
         <div id="social" class="content">
           <h2>Social</h2>
         </div>
+        <div id="store" class="content">
+          <h2>Gem Store</h2>
+        </div>
+        <div id="studio" class="content">
+          <h2>Card Studio</h2>
+        </div>
+        <div id="battle" class="content">
+          <h2>Battle</h2>
+        </div>
         <div id="shop" class="content">
-          <h2>Buy Sets</h2>
+          <h2>Card Shop</h2>
           <div class="cards-container">
             <div class="action-card sell-card" id="buyCard">
               <i class="fas fa-store"></i>
@@ -267,14 +277,41 @@
           <h2>Settings</h2>
           <div class="settings-container">
             <div class="setting-item">
-              <p style="margin-bottom: 0.5rem;"><b><i class="fa fa-headphones"></i> Headphones Recommended</b></p>
-              <label for="ambience">Ambience:</label>
-              <select id="ambience">
-                <option value="none">None</option>
-                <option value="rain">Rain</option>
-                <option value="wind">Wind</option>
-                <option value="thunder">Thunder</option>
-              </select>
+              <div class="content-card">
+                <h3>Audio Settings</h3>
+                <p>Adjust volume for game sounds</p>
+                <div class="content-card">
+                  <div class="left-and-right">
+                    <h4>Volume</h4>
+                    <span>
+                      <i class="fa fa-volume"></i>
+                      <span id="volumeDisplay">50%</span>
+                    </span>
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="slider" id="volumeControl">
+                  <p class="small">Controls all game sounds including effects and background audio.</p>
+                </div>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="content-card">
+                <h3>Data & Privacy</h3>
+                <div class="content-card">
+                  <h4>Download Your Data</h4>
+                  <p class="small">Export a complete copy of your account data including your collection, battles, and
+                    profile information.</p>
+                  <button class="button button-secondary" id="downloadData"><i class="fa fa-download"></i> Download
+                    Data</button>
+                </div>
+                <div class="content-card content-card-danger">
+                  <h4>Delete Account</h4>
+                  <p class="small">Schedule your account for permanent deletion. This will anonymize your data while
+                    preserving transaction records for
+                    compliance.</p>
+                  <button class="button button-danger" id="deleteAccount"><i class="fa fa-trash"></i> Delete
+                    Account</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -296,7 +333,7 @@
       &copy; 2025 rainycards. Website is open-sauce. Have 🥳!
     </div>
 
-    <script src="app.js"></script>
+    <script src="/app/app.js"></script>
   </body>
 
 </html>
