@@ -701,6 +701,12 @@ select:focus {
   color: var(--text-color);
 }
 
+/* Icon styles */
+.icon {
+  display: inline-flex;
+  transform: translate(0, 0.2rem);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {
