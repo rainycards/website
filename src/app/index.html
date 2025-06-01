@@ -383,6 +383,8 @@
       </div>
     </div>
 
+    <!-- Footer -->
+
     <div class="footer">
       <div class="socials">
         <a href="https://github.com/rainycards" target="_blank" rel="noopener" title="GitHub">
@@ -400,6 +402,35 @@
         <a href="/policies/terms.html">Terms</a>
         <span> | </span>
         <a href="/policies/privacy.html">Privacy</a>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="reportModal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Report User</h2>
+        <p>You are reporting: <b id="reportUser"></b></p>
+        <select id="reportReason">
+          <option value="spam">Spam</option>
+          <option value="abuse">Abuse or harassment</option>
+          <option value="misinfo">Harmful misinformation or glorifying violence</option>
+          <option value="private-info">Exposing private identifying information</option>
+          <option value="other">Something else</option>
+        </select>
+        <textarea id="reportDetails" placeholder="Please provide any additional details about the report"></textarea>
+        <button class="button button-primary" id="submitReport"><i class="fa fa-flag"
+            style="margin-right: 0.5rem;"></i>Submit Report</button>
+      </div>
+    </div>
+
+    <div class="modal" id="deleteModal" style="display:none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Delete Account</h2>
+        <p style="margin-bottom: 0.5rem;">Are you sure you want to delete your account? This action is irreversible.</p>
+        <button class="button button-danger" id="confirmDelete"><i class="fa fa-trash"
+            style="margin-right: 0.5rem;"></i>Yes, delete my account</button>
       </div>
     </div>
 

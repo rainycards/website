@@ -72,4 +72,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize volume display
   volumeDisplay.textContent = `${volumeControl.value}%`;
+
+  // Modal functionality
+  const reportModal = document.getElementById('reportModal');
+  const deleteModal = document.getElementById('deleteModal');
+  const closeModalButtons = document.querySelectorAll('.close');
+
+  closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      button.closest('.modal').style.display = 'none';
+    });
+  });
+
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'flex';
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+  }
+
+  // Delete account button
+  const deleteAccountButton = document.getElementById('deleteAccount');
+
+  deleteAccountButton.addEventListener('click', () => {
+    openModal('deleteModal');
+  });
 });
