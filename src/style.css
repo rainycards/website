@@ -104,6 +104,8 @@ body {
   background-color: var(--secondary-bg);
   border-radius: 8px;
   padding: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .username {
@@ -657,7 +659,7 @@ select:focus {
   border-radius: 4px;
   position: relative;
   background: linear-gradient(90deg, var(--accent-color) 0%, var(--color-blue) 100%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: background 0.3s;
 }
 
@@ -668,14 +670,14 @@ select:focus {
   border-radius: 50%;
   background: #fff;
   border: 2px solid var(--accent-color);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .slider:hover::-webkit-slider-thumb {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 4px rgba(0,123,255,0.15);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
 }
 
 .slider:focus::-webkit-slider-thumb {
@@ -689,7 +691,7 @@ select:focus {
   border-radius: 50%;
   background: #fff;
   border: 2px solid var(--accent-color);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -701,7 +703,7 @@ select:focus {
 
 .slider:focus::-moz-range-thumb {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 4px rgba(0,123,255,0.15);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
 }
 
 .slider::-ms-thumb {
@@ -710,14 +712,14 @@ select:focus {
   border-radius: 50%;
   background: #fff;
   border: 2px solid var(--accent-color);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .slider:focus::-ms-thumb {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 4px rgba(0,123,255,0.15);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -846,6 +848,75 @@ select:focus {
 .icon {
   display: inline-flex;
   transform: translate(0, 0.2rem);
+}
+
+/* Store item styles */
+.store-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.store-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin: 10px;
+  width: 320px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-item:hover {
+  transform: translate(0, -5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.store-header {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.store-header img {
+  width: 100%;
+  height: 100px;
+  display: block;
+  margin: 0;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.store-item-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.store-item-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.store-item-price .current {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.store-item-price .crossed {
+  text-decoration: line-through;
+  color: var(--text-color-secondary);
+  margin-right: 0.3rem;
+}
+
+.store-item-price .discount {
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
 }
 
 /* Responsive adjustments */
