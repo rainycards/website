@@ -186,6 +186,7 @@ body {
   border-bottom: none;
   border-radius: 5px 5px 0 0;
   transition: font-weight 0.3s ease;
+  cursor: pointer;
 }
 
 .tab.active,
