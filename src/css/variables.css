@@ -1,0 +1,51 @@
+/* Root variables for theming */
+:root {
+  --primary-bg: #1a1a1a;
+  --secondary-bg: #2c2c2c;
+  --text-color: #ffffff;
+  --text-color-secondary: #b3b3b3;
+  --accent-color: #007bff;
+  --border-color: #444;
+  --light-bg: #ffffff;
+  --light-text: #333;
+  --light-text-secondary: #666;
+  --light-border: #ddd;
+
+  /* Colours */
+  --color-red: #ef4444;
+  --color-orange: #f97316;
+  --color-amber: #f59e0b;
+  --color-yellow: #eab308;
+  --color-lime: #84cc16;
+  --color-green: #22c55e;
+  --color-emerald: #10b981;
+  --color-teal: #14b8a6;
+  --color-cyan: #06b6d4;
+  --color-sky: #0ea5e9;
+  --color-blue: #3b82f6;
+  --color-indigo: #6366f1;
+  --color-violet: #8b5cf6;
+  --color-purple: #a855f7;
+  --color-fuchsia: #d946ef;
+  --color-pink: #ec4899;
+  --color-rose: #f43f5e;
+}
+
+/* Light theme adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-bg: var(--light-bg);
+    --secondary-bg: #f5f5f5;
+    --text-color: var(--light-text);
+    --text-color-secondary: var(--light-text-secondary);
+    --border-color: var(--light-border);
+  }
+
+  .logo-light {
+    display: block;
+  }
+
+  .logo-dark {
+    display: none;
+  }
+}

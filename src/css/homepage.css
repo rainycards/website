@@ -1,0 +1,163 @@
+.hero {
+  padding: 140px 20px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.features,
+.how-it-works,
+.testimonials {
+  max-width: 960px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.features h2,
+.how-it-works h2,
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-item {
+  flex: 1 1 200px;
+  padding: 1rem;
+}
+
+.feature-item i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1 1 30%;
+  padding: 1rem;
+}
+
+.step span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  max-width: 250px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.quote-icon {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-meta {
+  text-align: center;
+}
+
+.testimonial-meta .name {
+  font-weight: bold;
+  display: block;
+}
+
+.testimonial-meta .role {
+  font-size: 0.85rem;
+  color: var(--text-color-secondary);
+}
+
+.policy-container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.policy-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.policy-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.policy-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.policy-container li {
+  margin-bottom: 10px;
+}
+
+.policy-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
