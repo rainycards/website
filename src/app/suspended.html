@@ -82,7 +82,50 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      function updateCountdown() {
+        const expires = parseInt(getQueryParam('expires')) * 1000; // Convert epoch seconds to milliseconds
+        const countdownContainer = document.querySelector('.countdown-container');
+
+        if (!expires || isNaN(expires)) {
+          countdownContainer.innerHTML = `
+            <a href="index.html" class="button button-primary">Suspension has expired</a>
+          `;
+          return;
+        }
+
+        const now = new Date().getTime();
+        const timeLeft = expires - now;
+
+        if (timeLeft <= 0) {
+          countdownContainer.innerHTML = `
+            <a href="index.html" class="button button-primary">Suspension has expired</a>
+          `;
+          return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById('suspendedCountdownDays').textContent = String(days).padStart(2, '0');
+        document.getElementById('suspendedCountdownHours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('suspendedCountdownMinutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('suspendedCountdownSeconds').textContent = String(seconds).padStart(2, '0');
+      }
+
+      // Update countdown every second
+      setInterval(updateCountdown, 1000);
+
+      // Run immediately to avoid initial 1-second delay
+      updateCountdown();
+    </script>
   </body>
 
 </html>
