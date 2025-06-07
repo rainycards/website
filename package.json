@@ -1,8 +1,7 @@
 {
-  "name": "client",
+  "name": "rainycards-client",
   "version": "1.0.0",
   "description": "This is the frontend client for the Rainycards project.",
-  "main": "index.js",
   "scripts": {
     "start": "npx serve src"
   },
@@ -11,7 +10,7 @@
     "url": "git+https://github.com/rainycards/website.git"
   },
   "keywords": [],
-  "author": "rainycards",
+  "author": "Rainycards",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rainycards/website/issues"
