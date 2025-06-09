@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const contents = document.querySelectorAll('.content');
   const actionCards = document.querySelectorAll('.action-card');
   const sellCard = document.getElementById('sellCard');
-  const evolveCard = document.getElementById('evolveCard');
   const buyCard = document.getElementById('buyCard');
 
   tabs.forEach(tab => {
@@ -46,12 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   sellCard.addEventListener('drop', (e) => {
     e.preventDefault();
     sellCard.classList.remove('dragover');
-    const data = JSON.parse(e.dataTransfer.getData('text/plain'));
-  });
-
-  evolveCard.addEventListener('drop', (e) => {
-    e.preventDefault();
-    evolveCard.classList.remove('dragover');
     const data = JSON.parse(e.dataTransfer.getData('text/plain'));
   });
 

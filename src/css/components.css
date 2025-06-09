@@ -395,19 +395,6 @@ a:hover {
   color: var(--color-yellow);
 }
 
-.evolve-card {
-  border: 3px dotted var(--color-blue);
-}
-
-.evolve-card.dragover,
-.evolve-card:hover {
-  box-shadow: 0 0 10px var(--color-blue);
-}
-
-.evolve-card i {
-  color: var(--color-blue);
-}
-
 .button {
   background-color: var(--accent-color);
   color: #fff;
